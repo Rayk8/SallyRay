@@ -1,7 +1,32 @@
+/* Reset and Body Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#music-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffb6c1; /* Soft pink color */
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+#music-button:hover {
+    background-color: #ff69b4; /* Slightly darker pink on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+#music-button:active {
+    transform: scale(0.95); /* Pressed-in effect */
 }
 
 body {
@@ -12,6 +37,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header Styling */
 header {
     padding: 2rem;
     background-color: #ffb6c1;
@@ -20,11 +46,68 @@ header {
     font-weight: bold;
 }
 
+/* Slideshow Container */
 #slideshow {
     position: relative;
     max-width: 600px;
     margin: 2rem auto;
-    height: 500px; /* Increase height for taller photos */
+    height: 600px; /* Taller height for photos */
+    padding-bottom: 2rem; /* Space between slideshow and text box */
+}
+
+/* Animated Heart Decorations */
+.decoration {
+    position: absolute;
+    top: 50%;
+    width: 120px; /* Extra large size */
+    height: 120px;
+    background-color: #ffb6c1; /* Soft pink color for heart */
+    transform: rotate(-45deg); /* Rotate to form the heart shape */
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.8;
+    z-index: 2; /* Ensure hearts are on top */
+}
+
+.decoration::before,
+.decoration::after {
+    content: "";
+    position: absolute;
+    width: 120px; /* Match the size with main decoration */
+    height: 120px;
+    background-color: #ffb6c1;
+    border-radius: 50%;
+}
+
+/* Position the circles to form the top of the heart */
+.decoration::before {
+    top: -60px;
+    left: 0;
+}
+
+.decoration::after {
+    top: 0;
+    left: 60px;
+}
+
+/* Positioning for Left and Right Decorations */
+.decoration.left {
+    left: -150px; /* Move further left */
+    animation-delay: 0s;
+}
+
+.decoration.right {
+    right: -150px; /* Move further right */
+    animation-delay: 1.5s; /* Staggered animation for variety */
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(10px) rotate(-45deg);
+    }
 }
 
 .slideshow-container {
@@ -36,12 +119,21 @@ header {
     height: 100%; /* Ensure container matches fixed height */
 }
 
+/* Add Outline and Floating Effect on Hover */
 .slide {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Scale photos to fill the container */
     display: none; /* Hide all slides initially */
     border-radius: 10px;
+    border: 5px solid #ffb6c1; /* Outline around the photo */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect for Floating */
+.slide:hover {
+    transform: translateY(-10px); /* Floating effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 /* Arrow Styling */
@@ -52,7 +144,7 @@ header {
     font-size: 2rem;
     color: #ffb6c1; /* Soft pink color for the arrows */
     font-weight: bold;
-    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background for visibility */
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transform: translateY(-50%);
@@ -68,22 +160,53 @@ header {
     right: 10px;
 }
 
-/* Hover Effects */
+/* Hover Effects for Arrows */
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.4); /* Darken background on hover */
     color: #ffffff; /* Change arrow color to white on hover */
 }
 
+#video-section {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 600px;
+    background-color: #fff0f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#video-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.video-player {
+    width: 100%; /* Ensures video fits the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Love Messages Section with Floating Effect */
 #messages {
-    margin-top: 2rem;
+    margin-top: 2rem; /* Space between the slideshow and messages */
     padding: 2rem;
     background-color: #fff0f5;
     border-radius: 10px;
     max-width: 600px;
     margin: 2rem auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Floating effect for the messages section on hover */
+#messages:hover {
+    transform: translateY(-10px); /* Floating effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Footer Styling */
 footer {
     margin-top: 3rem;
     padding: 2rem;
@@ -91,3 +214,4 @@ footer {
     color: #fff;
     font-size: 1.2rem;
 }
+

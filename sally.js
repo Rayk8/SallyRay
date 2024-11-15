@@ -20,3 +20,18 @@ function showSlides(n) {
 
     slides[slideIndex].style.display = "block";
 }
+
+const music = document.getElementById("background-music");
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+}
+
+window.onload = () => {
+    music.volume = 0.2; // Set initial volume level
+};
+

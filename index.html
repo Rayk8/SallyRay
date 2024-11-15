@@ -11,36 +11,59 @@
         <h1>Sally ♡ Ray</h1>
     </header>
 
+    <audio id="background-music" loop>
+        <source src="song.mp3" type="audio/mp3">
+    </audio>
+    <button onclick="toggleMusic()" id="music-button">Play/Pause Music</button>    
+
     <section id="slideshow">
-        <h2>Our Favorite Moments</h2>
+        <div class="decoration left"></div>
+        <div class="decoration right"></div>
+        <h2>사진s!!!</h2>
         <div class="slideshow-container">
-            <img src="images/2.jpg" class="slide" alt="Our Moments">
-            <img src="images/1.jpeg" class="slide" alt="Our Moments">
-            <img src="images/3.jpeg" class="slide" alt="Our Moments">
-            <img src="images/4.jpeg" class="slide" alt="Our Moments">
-            <img src="images/5.jpeg" class="slide" alt="Our Moments">
-            <img src="images/6.jpeg" class="slide" alt="Our Moments">
-            <img src="images/7.jpeg" class="slide" alt="Our Moments">
-            <img src="images/8.jpeg" class="slide" alt="Our Moments">
-            <img src="images/9.jpeg" class="slide" alt="Our Moments">
-            <img src="images/10.jpeg" class="slide" alt="Our Moments">
-            <img src="images/11.jpeg" class="slide" alt="Our Moments">
-            <img src="images/12.jpeg" class="slide" alt="Our Moments">
-            <!-- Add more images as needed in the images folder -->
+            <img src="images/August 31st 2024.jpeg" class="slide" alt="Our Moments">
+            <img src="images/Augusts 31st 2024 2.jpeg" class="slide" alt="Our Moments">
+            <img src="images/September 10th 2024.jpeg" class="slide" alt="Our Moments">
+            <img src="images/September 12th 2024.jpg" class="slide" alt="Our Moments">
+            <img src="images/September 20th 2024.JPG" class="slide" alt="Our Moments">
+            <img src="images/September 21st 2024.jpeg" class="slide" alt="Our Moments">
+            <img src="images/September 21st 2024 2.jpeg" class="slide" alt="Our Moments">
+            <img src="images/September 23rd 2024.jpeg" class="slide" alt="Our Moments">
+            <img src="images/October 5th 2024.jpeg" class="slide" alt="Our Moments">
+            <img src="images/October 5th 2024 2.jpeg" class="slide" alt="Our Moments">
+            <img src="images/October 17th 2024.jpeg" class="slide" alt="Our Moments">
+            <img src="images/October 17th 2024 2.jpeg" class="slide" alt="Our Moments">
+            <img src="images/October 30th 2024.jpeg" class="slide" alt="Our Moments">
+            <img src="images/November 9th 2024.jpeg" class="slide" alt="Our Moments">
+            <img src="images/November 11th 2024.jpeg" class="slide" alt="Our Moments">
+            <img src="images/November 13th 2024.jpeg" class="slide" alt="Our Moments">
+            <img src="images/November 13th 2024 2.jpeg" class="slide" alt="Our Moments">
+            <img src="images/November 13th 2024 3.jpeg" class="slide" alt="Our Moments">
+            <img src="images/November 14th 2024.jpeg" class="slide" alt="Our Moments">
         </div>
         <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+
+    <section id="video-section">
+        <h2>ㅋㅋㅋ</h2>
+        <video controls width="600" class="video-player">
+            <source src="IMG_6117.mp4" type="video/mp4">
+        </video>
     </section>
 
     <section id="messages">
         <h2>요한복음/John 15:12</h2>
         <p>내가 너희를 사랑한 것처럼 너희도 서로 사랑하여라. 이것이 내 계명이다.</p>
         <p> My command is this: Love each other as I have loved you.</p>
-        <!-- Add more personalized messages here -->
+    </section>
+
+    <section id="messages">
+        <h2>세연!!!  사랑해!!!</h2>
     </section>
 
     <footer>
-        <p>사랑해!!!</p>
+        <p></p>
     </footer>
 
     <script src="sally.js"></script>
